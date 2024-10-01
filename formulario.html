@@ -1,0 +1,74 @@
+<!-- Alberto Sánchez Díaz 2DAW -->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cambio climático</title>
+        <link rel="icon" href="img/icono.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body id="fondo">
+        <!-- Header de la página -->
+        <header>
+            <!-- Logo de la página -->
+            <div class="contenedor-logo">
+                <a href="#"><img class="logo" src="img/icono.png" alt="logo de la página"></a>
+            </div>
+            <!-- Enlaces de navegación -->
+            <nav>
+                <a href="index.html" class="link">Inicio</a>
+                <a href="#" class="link activo">Formulario</a>
+            </nav>
+        </header>
+        <!-- Contenido principal -->
+        <main>
+            <h1>Comparte tu experiencia</h1>
+            <div class="formulario-contenedor">
+                <!-- Formulario -->
+                <form action="mostrar.php" method="get">
+                    <label for="nombre">¿Cómo te llamas?</label>
+                    <input type="text" id="nombre" name="nombre" >
+                    <label for="edad">¿Qué edad tienes?</label>
+                    <input type="number" id="edad" name="edad" min="12" max="99">
+                    <label for="email">¿Cómo podemos contactar contigo?</label>
+                    <input type="email" id="email" name="email" >
+                    <label for="desastre">¿De qué desastre natural quieres recibir información?</label>        
+                    <div id="checkbox_caja">
+                        <input type="checkbox" id="inundacion" name="desastre[]" value="inundacion">
+                        <label for="inundacion"><span>Inundación</span></label>                   
+                        <input type="checkbox" id="terremoto" name="desastre[]" value="terremoto">
+                        <label for="terremoto"><span>Terremoto</span></label>
+                        <input type="checkbox" id="incendio" name="desastre[]" value="incendio">
+                        <label for="incendio"><span>Incendio</span></label>
+                        <input type="checkbox" id="huracan" name="desastre[]" value="huracan">
+                        <label for="huracan"><span>Huracán</span></label>
+                        <input type="checkbox" id="tsunami" name="desastre[]" value="tsunami">
+                        <label for="tsunami"><span>Tsunami</span></label>
+                    </div>
+                    <label>¿Has tomado alguna medidas preventiva?</label><br><br>
+                    <input type="radio" name="medidas" value="kit">
+                    <label><span>Preparar un kit de emergencia</span></label><br>
+                    <input type="radio" name="medidas" value="plan">
+                    <label><span>Tener un plan de evacuación</span></label><br>
+                    <input type="radio" name="medidas" value="seguros">
+                    <label><span>Contratar seguros para desastres</span></label><br>
+                    <input type="radio" name="medidas" value="entrenamiento">
+                    <label><span>Recibir entrenamiento en primeros auxilios</span></label><br><br>
+                    <label for="opinion">¿Cómo te impactó?</label>
+                    <textarea id="opinion" name="opinion" rows="4"></textarea>
+                    <input type="checkbox" id="terminos" name="terminos" value="si" />
+                    <label for="terminos"><span class>Acepto los términos y condiciones</span></label><br>
+                    <input type="checkbox" id="informacion" name="informacion" value="si" />
+                    <label for="informacion"><span>Deseo recibir información con noticias destacadas</span></label>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </main>
+        <!-- Footer de la página -->
+        <footer>
+            <h2>Diseño de Interfaces Web - Alberto Sánchez Díaz</h2>
+        </footer>
+    </body>
+</html>
